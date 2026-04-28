@@ -1,0 +1,11 @@
+/src/main/resources/application.properties
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.DS_Store
+Thumbs.db
+*.log
