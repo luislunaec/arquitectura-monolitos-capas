@@ -15,7 +15,6 @@ import java.util.Map;
 public class LibroController {
 
     private final ChatLanguageModel chatLanguageModel;
-    // Lista en memoria para el Spaghetti (Pecado: No usar DB real)
     private static List<Map<String, Object>> libros = new ArrayList<>();
 
     public LibroController(ChatLanguageModel chatLanguageModel) {
@@ -33,8 +32,6 @@ public class LibroController {
                           @RequestParam String autor,
                           @RequestParam Integer anio) {
 
-        // --- SPAGHETTI LOGIC CON IA ---
-        // Le preguntamos a Gemini si el libro es "serio" para la UCE
         String prompt = "Responde solo con SI o NO. ¿Es el libro '" + titulo + "' de " + autor +
                 " un libro que por su nombre este orientado para el crecimiento personal o a la informatica, tal vez para aprender algun lenguaje de programacion, base de datos, etc.?";
 
